@@ -19,10 +19,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Override point for customization after application launch.
     
     Parse.initialize(with: ParseClientConfiguration(block: { (configuration: ParseMutableClientConfiguration) in
-      configuration.applicationId = "parse-server-demo-henn-g"
+      configuration.applicationId = "myAppId-HENG1234"
       configuration.clientKey = nil
-      configuration.server = "https://parse-server-demo-henn-g.herokuapp.com/"
+      configuration.server = "https://insta-clone-hg.herokuapp.com/"
     }))
+    
+    // check if user is logged in.
+    if PFUser.current() != nil {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        // view controller currently being set in Storyboard as default will be overridden
+        window?.rootViewController = storyboard.instantiateViewController(withIdentifier: "AuthenticatedViewController")
+    }
+    
     return true
   }
 
