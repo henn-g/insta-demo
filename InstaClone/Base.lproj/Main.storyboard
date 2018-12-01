@@ -21,7 +21,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Instagram" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xzj-a5-ILa">
                                 <rect key="frame" x="98" y="20" width="178" height="92"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -45,7 +45,7 @@
                                 <state key="normal" title="Sign up"/>
                                 <connections>
                                     <action selector="signUpAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wzk-HD-Zx3"/>
-                                    <segue destination="hj2-l7-R4e" kind="presentation" id="ZQ6-Fe-O5g"/>
+                                    <segue destination="aaA-Ve-eL8" kind="presentation" id="ZQ6-Fe-O5g"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QU6-cu-x1g">
@@ -67,9 +67,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+            <point key="canvasLocation" x="-295" y="115"/>
         </scene>
-        <!--View Controller-->
+        <!--Home Feed-->
         <scene sceneID="MEY-QX-DnK">
             <objects>
                 <viewController id="hj2-l7-R4e" sceneMemberID="viewController">
@@ -77,20 +77,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aRr-6Q-Spu">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Home Feed" id="8zx-rR-49p">
-                                        <barButtonItem key="leftBarButtonItem" title="Logout" id="Umj-fK-2Oc"/>
-                                        <barButtonItem key="rightBarButtonItem" title="Take Photo" id="LMV-dT-GP6">
-                                            <connections>
-                                                <segue destination="CDz-9a-3Sb" kind="presentation" id="RA3-Kd-5vH"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="00R-IC-ql8">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -123,10 +109,22 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="DiE-JS-a9b"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Home Feed" id="WiA-0U-fWD">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="Umj-fK-2Oc">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="presentation" id="RfM-UZ-Ca8"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Take Photo" id="LMV-dT-GP6">
+                            <connections>
+                                <segue destination="CDz-9a-3Sb" kind="presentation" id="RA3-Kd-5vH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LAC-h4-GDS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="984.79999999999995" y="133.5832083958021"/>
+            <point key="canvasLocation" x="1766" y="115"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="3z8-bv-8L3">
@@ -158,7 +156,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oil-PH-Gha" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2728.8000000000002" y="133.5832083958021"/>
+            <point key="canvasLocation" x="3668" y="115"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="SHA-72-Uaz">
@@ -176,7 +174,25 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Muf-da-tDs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1789.5999999999999" y="133.5832083958021"/>
+            <point key="canvasLocation" x="2729" y="115"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="stl-Wo-q9I">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aaA-Ve-eL8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Lpw-Gg-ase">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hj2-l7-R4e" kind="relationship" relationship="rootViewController" id="bQm-Pj-05g"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cMJ-6T-VvK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="676" y="115"/>
         </scene>
     </scenes>
 </document>
